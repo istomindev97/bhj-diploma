@@ -7,7 +7,15 @@ class Account extends Entity {
   /**
    * Получает информацию о счёте
    * */
-  static get(id = '', callback){
+  static URL = ' /account';
 
+  static get(id = '', callback){
+    createRequest({
+      url: url,
+      method: "GET",
+      callback: (err, response) => {
+        callback(err, response);
+      }
+    });
   }
 }
